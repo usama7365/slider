@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="./jquery-3.6.0.js" ></script>   
+   <style>
+*
+{
+margin: 0;
+padding: 0;
+}
+.main
+{
+height:80vh;
+width: 70vw;
+left: 15vw;
+top: 5vh;
+border: 3px solid  yellowgreen;
+position: relative;
+overflow: hidden;
+}
+.child
+{
+height: 100%;
+width: 800%;
+display: flex;
+position: relative;
+}
+.child>img
+{
+height:100%;
+width: 12.5%;
+}
+.btn
+{
+height: 25px;
+width: 25px;
+border-radius: 50%;
+background-color: red;
+color: white;
+font-family: sans-serif;
+border: none;
+position: relative;
+left: 40vw;
+top: 7vh;
+
+
+}
+
+
+
+
+   </style>
+</head>
+<body>
+
+<div class="main">
+<div class="child">
+
+   <img src="./hero-bg.png" alt="">
+   <img src="./hero.jpg" alt="">
+   <img src="./originalgirl.gif" alt="">
+   <img src="./video-thumb.png" alt="">
+   <img src="./hero-bg.png" alt="">
+   <img src="./hero.jpg" alt="">
+   <img src="./originalgirl.gif" alt="">
+   <img src="./video-thumb.png" alt="">
+
+
+</div>
+
+
+</div>
+
+<button class="btn btn1">1</button>
+<button class="btn btn2">2</button>
+<button class="btn btn3">3</button>
+<button class="btn btn4">4</button>
+<button class="btn btn5">5</button>
+<button class="btn btn6">6</button>
+<button class="btn btn7">7</button>
+<button class="btn btn8">8</button>
+
+
+
+</body>
+
+<script>
+
+      var main = $(".main") 
+      var child = $(".child") 
+      var btn1 = $(".btn1") 
+      var btn2 = $(".btn2") 
+      var btn3 = $(".btn3") 
+      var btn4 = $(".btn4") 
+      var btn5 = $(".btn5") 
+      var btn6 = $(".btn6") 
+      var btn7 = $(".btn7") 
+      var btn8 = $(".btn8") 
+
+
+function animation(){
+
+let  x=0
+
+if(x>700){
+   x+100;
+}
+else{
+
+x-100;
+
+}
+
+
+}
+
+
+
+
+
+btn1.click(function  (){
+
+child.animate({right:"0%"})
+})
+
+btn2.click(function  (){
+
+child.animate({right:"100%"})
+})
+
+btn3.click(function  (){
+
+child.animate({right:"200%"})
+})
+
+btn4.click(function  (){
+
+child.animate({right:"300%"})
+})
+
+btn5.click(function  (){
+
+child.animate({right:"400%"})
+})
+
+btn6.click(function  (){
+
+child.animate({right:"500%"})
+})
+
+btn7.click(function  (){
+
+child.animate({right:"600%"})
+})
+
+btn8.click(function  (){
+
+child.animate({right:"700%"})
+})
+
+
+let count=0
+function slider(){
+var arr=["0%","100%","200%","300%","400%","500%","600%","700%"]
+
+child.animate({right:arr[count] })
+count++;   
+if(count>arr.length)
+var count=0;
+
+}
+
+
+
+
+
+
+
+
+
+setInterval(slider,2000)
+
+
+</script>
+
+</html>
